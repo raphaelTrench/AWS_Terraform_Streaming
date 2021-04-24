@@ -131,6 +131,12 @@ dmypy.json
 # Serverless directories
 .serverless
 
+# Project
 .vscode
-
-.terraform
+.terraform*
+terraform.tfstate*
+beer-service/lambda_layer/python/*
+beer-service/lambda_layer/layer/*
+lambda_layer.zip
+beer-service/handler.py.zip
+*ipynb
