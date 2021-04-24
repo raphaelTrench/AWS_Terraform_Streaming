@@ -4,11 +4,11 @@ resource "aws_cloudwatch_event_rule" "every_five_minutes" {
   schedule_expression = "rate(5 minutes)"
 }
 
-# resource "aws_cloudwatch_event_target" "trigger_lambda" {
-#   rule      = "${aws_cloudwatch_event_rule.every_five_minutes.name}"
-#   target_id = "lambda"
-#   arn       = "${aws_lambda_function.lambda_beer_ingestor.arn}"
-# }
+resource "aws_cloudwatch_event_target" "trigger_lambda" {
+  rule      = "${aws_cloudwatch_event_rule.every_five_minutes.name}"
+  target_id = "lambda"
+  arn       = "${aws_lambda_function.lambda_beer_ingestor.arn}"
+}
 
 resource "aws_cloudwatch_log_group" "get_beer_lambda_log" {
   name              = "/aws/lambda/${aws_lambda_function.lambda_beer_ingestor.function_name}"
