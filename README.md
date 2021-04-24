@@ -1,4 +1,4 @@
-# AWS_Beer_Streaming
+# AWS_Terraform_Streaming
 
 This is a very simple project I have made in order to get myself more familiar with both data streaming processes, terraform and working with the AWS platform as a whole.  
 A lambda function that requests data from [punkapi's](https://punkapi.com/documentation/v2) ``random`` endpoint: ```https://api.punkapi.com/v2/beers/random``` into a kinesis source stream is  periodically invoked by  a cloudwatch event rule. 
